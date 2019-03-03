@@ -113,10 +113,10 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="copyButton" destination="JQq-q0-mng" id="par-81-XBL"/>
-                        <outlet property="englishTextField" destination="F2q-1X-vOh" id="pVn-zn-sOW"/>
                         <outlet property="inputLabel" destination="UET-JG-ydG" id="uHn-dp-jO9"/>
-                        <outlet property="latinTextView" destination="Phf-BO-WDl" id="Pjo-Hj-OId"/>
+                        <outlet property="inputTextField" destination="F2q-1X-vOh" id="pVn-zn-sOW"/>
                         <outlet property="outputLabel" destination="Di3-oO-7QI" id="l5V-ef-pYh"/>
+                        <outlet property="outputTextView" destination="Phf-BO-WDl" id="Pjo-Hj-OId"/>
                         <outlet property="scrollView" destination="U7d-5H-ZZr" id="ndo-Zt-p9V"/>
                     </connections>
                 </viewController>

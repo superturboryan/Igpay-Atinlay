@@ -13,14 +13,16 @@ import ChameleonFramework
 class ViewController: UIViewController {
 
     //MARK: - Variables, outlets
+    
+    private var englishToPL = true
    
     @IBOutlet weak var scrollView: UIScrollView!
   
     @IBOutlet weak var copyButton: UIButton!
     
     
-    @IBOutlet weak var englishTextField: UITextField!
-    @IBOutlet weak var latinTextView: UITextView!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var outputTextView: UITextView!
     
     @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var outputLabel: UILabel!
@@ -35,7 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        englishTextField.delegate = self
+        inputTextField.delegate = self
         
         //UIUpdates()
         
@@ -47,21 +49,38 @@ class ViewController: UIViewController {
     
     @IBAction func copyPressed(_ sender: UIButton) {
         
-        UIPasteboard.general.string = latinTextView.text
+        UIPasteboard.general.string = outputTextView.text
         SVProgressHUD.showSuccess(withStatus: "Copied to clipboard")
     }
 
     @IBAction func switchPressed(_ sender: Any) {
         
+        //Change translation direction
+        englishToPL = !englishToPL
+        
+        //Switch labels
         let temp = inputLabel.text
         inputLabel.text = outputLabel.text
         outputLabel.text = temp
-        englishTextField.text = ""
-        latinTextView.text = ""
+        
+        //Clear input and output fields
+        inputTextField.text = ""
+        outputTextView.text = ""
     }
     
-    
-    
+    //When return is pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        
+        if inputTextField.text == ""{
+            reportError(title: "Input Empty", message: "Please enter some text in the input field")
+        }
+        else{
+            outputTextView.text = PLGenerator(input: inputTextField.text!)
+        }
+        return false
+    }
     
 }
 
@@ -69,10 +88,20 @@ class ViewController: UIViewController {
 
 extension ViewController : UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        latinTextView.text = PLGenerator(input: englishTextField.text!)
-        return false
+    //MARK: - Error alert popup
+    
+    func reportError(title : String, message : String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
     //MARK: - Listeners
@@ -115,7 +144,7 @@ extension ViewController : UITextFieldDelegate {
         let individualWordArray : [String] = input.lowercased().components(separatedBy: " ")
         
         if individualWordArray == [] {
-            latinTextView.text = "Please enter some text above!"
+            return "Please enter some text above!"
         }
         
         var pigLatinWordArray : [String] = [String]()
@@ -146,6 +175,23 @@ extension ViewController : UITextFieldDelegate {
             pigLatinString += pigLatinWord + " "
         }
         return pigLatinString
+    }
+    
+    func englishGenerator(input : String) -> String {
+        
+        var englishString = ""
+        
+        let pigLatinWordArray : [String] = input.lowercased().components(separatedBy: " ")
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        return englishString
     }
     
     //MARK: - UI Updates
