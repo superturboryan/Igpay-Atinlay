@@ -12,9 +12,11 @@
 		94976828222AF583008EB01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94976826222AF583008EB01A /* Main.storyboard */; };
 		9497682A222AF586008EB01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94976829222AF586008EB01A /* Assets.xcassets */; };
 		9497682D222AF586008EB01A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9497682B222AF586008EB01A /* LaunchScreen.storyboard */; };
+		D4D60517E8D64BD7DBF675AE /* Pods_Igpay_Atinlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4CD763E6C6FCCF37424631 /* Pods_Igpay_Atinlay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D4CD763E6C6FCCF37424631 /* Pods_Igpay_Atinlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Igpay_Atinlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9497681F222AF583008EB01A /* Igpay Atinlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Igpay Atinlay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94976822222AF583008EB01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94976824222AF583008EB01A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		94976829222AF586008EB01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9497682C222AF586008EB01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9497682E222AF586008EB01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05CBE1193AD9CB99F65D9CC /* Pods-Igpay Atinlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Igpay Atinlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Igpay Atinlay/Pods-Igpay Atinlay.debug.xcconfig"; sourceTree = "<group>"; };
+		EB26ED50D35B561835878A6C /* Pods-Igpay Atinlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Igpay Atinlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Igpay Atinlay/Pods-Igpay Atinlay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D60517E8D64BD7DBF675AE /* Pods_Igpay_Atinlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A9EE027A39311841F9DAE90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D4CD763E6C6FCCF37424631 /* Pods_Igpay_Atinlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94976816222AF583008EB01A = {
 			isa = PBXGroup;
 			children = (
 				94976821222AF583008EB01A /* Igpay Atinlay */,
 				94976820222AF583008EB01A /* Products */,
+				A50FCD0B42C3CB13D5D2CBB3 /* Pods */,
+				6A9EE027A39311841F9DAE90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "Igpay Atinlay";
 			sourceTree = "<group>";
 		};
+		A50FCD0B42C3CB13D5D2CBB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D05CBE1193AD9CB99F65D9CC /* Pods-Igpay Atinlay.debug.xcconfig */,
+				EB26ED50D35B561835878A6C /* Pods-Igpay Atinlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94976831222AF586008EB01A /* Build configuration list for PBXNativeTarget "Igpay Atinlay" */;
 			buildPhases = (
+				416949451EAC07D0703B27E7 /* [CP] Check Pods Manifest.lock */,
 				9497681B222AF583008EB01A /* Sources */,
 				9497681C222AF583008EB01A /* Frameworks */,
 				9497681D222AF583008EB01A /* Resources */,
+				CD428420170EB929970DF3A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		416949451EAC07D0703B27E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Igpay Atinlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD428420170EB929970DF3A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Igpay Atinlay/Pods-Igpay Atinlay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Igpay Atinlay/Pods-Igpay Atinlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9497681B222AF583008EB01A /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		94976832222AF586008EB01A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D05CBE1193AD9CB99F65D9CC /* Pods-Igpay Atinlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		94976833222AF586008EB01A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB26ED50D35B561835878A6C /* Pods-Igpay Atinlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

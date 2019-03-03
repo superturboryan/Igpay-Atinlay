@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,124 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Igpay_Atinlay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-5H-ZZr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background4" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-p2-jOO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V87-sW-nJF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnglishTextEntry" translatesAutoresizingMaskIntoConstraints="NO" id="PaJ-AW-uEf" userLabel="EnglishTextEntry">
+                                                <rect key="frame" x="33" y="96" width="308" height="232"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlippedTextBox" translatesAutoresizingMaskIntoConstraints="NO" id="obo-q7-vAu" userLabel="LatinTextEntry">
+                                                <rect key="frame" x="31" y="276" width="308" height="232"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header1" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-Bl-40h">
+                                                <rect key="frame" x="67" y="19" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Latin text comes out here" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Phf-BO-WDl">
+                                                <rect key="frame" x="44" y="317" width="283" height="163"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-1X-vOh">
+                                                <rect key="frame" x="44" y="210" width="283" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQq-q0-mng">
+                                                <rect key="frame" x="136" y="550" width="98" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="Copy button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="copyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WB-Ib-IAM"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UET-JG-ydG">
+                                                <rect key="frame" x="44" y="179" width="79" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sb-aR-lDD">
+                                                <rect key="frame" x="45" y="264" width="42" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Switch1"/>
+                                                <connections>
+                                                    <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gPm-SR-TUD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pig Latin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di3-oO-7QI">
+                                                <rect key="frame" x="245" y="293" width="83" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0o8-p2-jOO" firstAttribute="top" secondItem="U7d-5H-ZZr" secondAttribute="top" id="Rhj-fP-OeY"/>
+                                    <constraint firstAttribute="bottom" secondItem="V87-sW-nJF" secondAttribute="bottom" id="SGD-Vs-sYJ"/>
+                                    <constraint firstItem="V87-sW-nJF" firstAttribute="leading" secondItem="U7d-5H-ZZr" secondAttribute="leading" id="YKK-IX-Y2Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="V87-sW-nJF" secondAttribute="trailing" id="YMh-EB-aXl"/>
+                                    <constraint firstItem="V87-sW-nJF" firstAttribute="centerY" secondItem="U7d-5H-ZZr" secondAttribute="centerY" id="cv8-9e-pcA"/>
+                                    <constraint firstItem="V87-sW-nJF" firstAttribute="centerX" secondItem="U7d-5H-ZZr" secondAttribute="centerX" id="jxi-rl-aPQ"/>
+                                    <constraint firstItem="0o8-p2-jOO" firstAttribute="leading" secondItem="U7d-5H-ZZr" secondAttribute="leading" id="liQ-MU-4rW"/>
+                                    <constraint firstAttribute="trailing" secondItem="0o8-p2-jOO" secondAttribute="trailing" id="tHo-Ry-ZCj"/>
+                                    <constraint firstItem="V87-sW-nJF" firstAttribute="top" secondItem="U7d-5H-ZZr" secondAttribute="top" id="wiI-Wu-04S"/>
+                                    <constraint firstAttribute="bottom" secondItem="0o8-p2-jOO" secondAttribute="bottom" id="ygO-41-avj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U7d-5H-ZZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Wn-2D-abm"/>
+                            <constraint firstItem="U7d-5H-ZZr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eoo-HC-Bic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U7d-5H-ZZr" secondAttribute="trailing" id="f8m-i4-dG7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U7d-5H-ZZr" secondAttribute="bottom" id="xMc-wB-4MN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="copyButton" destination="JQq-q0-mng" id="par-81-XBL"/>
+                        <outlet property="englishTextField" destination="F2q-1X-vOh" id="pVn-zn-sOW"/>
+                        <outlet property="inputLabel" destination="UET-JG-ydG" id="uHn-dp-jO9"/>
+                        <outlet property="latinTextView" destination="Phf-BO-WDl" id="Pjo-Hj-OId"/>
+                        <outlet property="outputLabel" destination="Di3-oO-7QI" id="l5V-ef-pYh"/>
+                        <outlet property="scrollView" destination="U7d-5H-ZZr" id="ndo-Zt-p9V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background4" width="375" height="667"/>
+        <image name="Copy button" width="98" height="44"/>
+        <image name="EnglishTextEntry" width="352" height="90"/>
+        <image name="FlippedTextBox" width="352" height="240"/>
+        <image name="Header1" width="270" height="73"/>
+        <image name="Switch1" width="42" height="36"/>
+    </resources>
 </document>
