@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import SVProgressHUD
 import ChameleonFramework
 
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
         
         //UIUpdates()
         
+        englishGenerator(input: "erehay isway omesay ealray igpay atinlay")
     }
     
 
@@ -77,7 +79,12 @@ class ViewController: UIViewController {
             reportError(title: "Input Empty", message: "Please enter some text in the input field")
         }
         else{
-            outputTextView.text = PLGenerator(input: inputTextField.text!)
+            if englishToPL {
+                outputTextView.text = PLGenerator(input: inputTextField.text!)
+            }
+            else {
+                outputTextView.text = englishGenerator(input: inputTextField.text!)
+            }
         }
         return false
     }
@@ -134,21 +141,19 @@ extension ViewController : UITextFieldDelegate {
         
     }
    
-    //MARK - Generator
+    //MARK: - Generators
     
     func PLGenerator(input : String) -> String {
+        
+        var pigLatinString = ""
         
         let vowels : [Character] = ["a" , "e" , "i" , "o" , "u" , "y"]
         let consonants : [Character] = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"]
         
         let individualWordArray : [String] = input.lowercased().components(separatedBy: " ")
         
-        if individualWordArray == [] {
-            return "Please enter some text above!"
-        }
-        
         var pigLatinWordArray : [String] = [String]()
-        var pigLatinString = ""
+        
         
         for word in individualWordArray {
             
@@ -170,10 +175,12 @@ extension ViewController : UITextFieldDelegate {
             }
             
         }
+        //String concatenation
         for pigLatinWord in pigLatinWordArray {
-            
+    
             pigLatinString += pigLatinWord + " "
         }
+        
         return pigLatinString
     }
     
@@ -183,13 +190,35 @@ extension ViewController : UITextFieldDelegate {
         
         let pigLatinWordArray : [String] = input.lowercased().components(separatedBy: " ")
         
+        var englishWordArray : [String] = [String]()
         
+        for word in pigLatinWordArray {
+            
+            var englishWordToAdd = word
+            
+            var charArray = Array(englishWordToAdd)
+            
+            if charArray.count > 2 {
+                charArray.remove(at: charArray.count-1)
+                charArray.remove(at: charArray.count-1)
+            }
+            
+            if charArray[charArray.count-1] == "w" {
+                charArray.remove(at: charArray.count-1)
+            }
+            else{
+                let charToInsert = charArray[charArray.count-1]
+                charArray.remove(at: charArray.count-1)
+                charArray.insert(charToInsert, at: 0)
+            }
+            
+            englishWordToAdd = String(charArray)
+            englishWordArray.append(englishWordToAdd)
+        }
         
-        
-        
-        
-        
-        
+        for englishWord in englishWordArray {
+            englishString += englishWord + " "
+        }
         
         return englishString
     }
@@ -201,11 +230,50 @@ extension ViewController : UITextFieldDelegate {
         
         
         //Shadows
-
   
     }
     
 }
 
+extension String {
+    subscript(value: NSRange) -> Substring {
+        return self[value.lowerBound..<value.upperBound]
+    }
+}
 
+extension String {
+    subscript(value: CountableClosedRange<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)...index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: CountableRange<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)..<index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeUpTo<Int>) -> Substring {
+        get {
+            return self[..<index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeThrough<Int>) -> Substring {
+        get {
+            return self[...index(at: value.upperBound)]
+        }
+    }
+    
+    subscript(value: PartialRangeFrom<Int>) -> Substring {
+        get {
+            return self[index(at: value.lowerBound)...]
+        }
+    }
+    
+    func index(at offset: Int) -> String.Index {
+        return index(startIndex, offsetBy: offset)
+    }
+}
 
