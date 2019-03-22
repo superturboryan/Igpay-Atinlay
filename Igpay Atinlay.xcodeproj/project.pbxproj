@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941F9B6F2244805000880672 /* Screenshots1.png in Resources */ = {isa = PBXBuildFile; fileRef = 941F9B6D2244805000880672 /* Screenshots1.png */; };
+		941F9B702244805000880672 /* Screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 941F9B6E2244805000880672 /* Screenshot2.png */; };
 		94976823222AF583008EB01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94976822222AF583008EB01A /* AppDelegate.swift */; };
 		94976825222AF583008EB01A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94976824222AF583008EB01A /* ViewController.swift */; };
 		94976828222AF583008EB01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94976826222AF583008EB01A /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		6D4CD763E6C6FCCF37424631 /* Pods_Igpay_Atinlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Igpay_Atinlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		941F9B6D2244805000880672 /* Screenshots1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshots1.png; sourceTree = "<group>"; };
+		941F9B6E2244805000880672 /* Screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot2.png; sourceTree = "<group>"; };
 		9497681F222AF583008EB01A /* Igpay Atinlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Igpay Atinlay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94976822222AF583008EB01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94976824222AF583008EB01A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		941F9B6C2244802E00880672 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				941F9B6D2244805000880672 /* Screenshots1.png */,
+				941F9B6E2244805000880672 /* Screenshot2.png */,
+			);
+			name = Screenshots;
+			sourceTree = "<group>";
+		};
 		94976816222AF583008EB01A = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 		94976821222AF583008EB01A /* Igpay Atinlay */ = {
 			isa = PBXGroup;
 			children = (
+				941F9B6C2244802E00880672 /* Screenshots */,
 				94976822222AF583008EB01A /* AppDelegate.swift */,
 				94976824222AF583008EB01A /* ViewController.swift */,
 				94976826222AF583008EB01A /* Main.storyboard */,
@@ -150,7 +164,9 @@
 			files = (
 				9497682D222AF586008EB01A /* LaunchScreen.storyboard in Resources */,
 				9497682A222AF586008EB01A /* Assets.xcassets in Resources */,
+				941F9B6F2244805000880672 /* Screenshots1.png in Resources */,
 				94976828222AF583008EB01A /* Main.storyboard in Resources */,
+				941F9B702244805000880672 /* Screenshot2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
