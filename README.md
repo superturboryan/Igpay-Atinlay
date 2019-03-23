@@ -1,5 +1,5 @@
 # Igpay-Atinlay
-This is a simple English to Pig Latin translator with copy-to-clipboard functionality
+This is a simple English to Pig Latin (or vice-versa) translator with copy-to-clipboard functionality
 
 
 ## Screenshots
